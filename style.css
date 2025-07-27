@@ -1,0 +1,167 @@
+:root {
+  --vert-senegal: #00853f;
+  --jaune-senegal: #fcd116;
+  --rouge-senegal: #e30b17;
+  --gris-clair: #f4f4f4;
+  --noir: #222;
+  --gris-fonce: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--gris-clair);
+  color: var(--noir);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--vert-senegal);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--jaune-senegal);
+  color: var(--noir);
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 15px 40px;
+}
+
+.section {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: var(--vert-senegal);
+  margin-bottom: 15px;
+}
+
+form input,
+form select,
+form button {
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: var(--jaune-senegal);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--rouge-senegal);
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: var(--vert-senegal);
+  color: white;
+  font-weight: 600;
+}
+
+button.btn-reset {
+  margin-top: 15px;
+  background-color: var(--rouge-senegal);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button.btn-reset:hover {
+  background-color: #b30a12;
+}
+
+.facture-section {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: var(--gris-fonce);
+}
+
+footer {
+  background-color: var(--jaune-senegal);
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  color: var(--noir);
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form input,
+  form select,
+  form button {
+    width: 100%;
+    margin: 8px 0;
+  }
+}

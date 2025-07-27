@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SENStock - Gestion de Stock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>SENStock</h1>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#ajout">Ajouter Produit</a></li>
+        <li><a href="#produits">Produits</a></li>
+        <li><a href="#facturation">Facturation</a></li>
+        <li><a href="#historique">Historique</a></li>
+        <li><a href="#parametres">Paramètres</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="section">
+      <h2>Bienvenue sur SENStock</h2>
+      <p>Gérez efficacement vos stocks et vos ventes.</p>
+    </section>
+
+    <section id="ajout" class="section">
+      <h2>Ajouter un produit</h2>
+      <form id="ajout-form">
+        <input type="text" id="nom-produit" placeholder="Nom du produit" required />
+        <input type="number" id="quantite-produit" placeholder="Quantité" min="1" required />
+        <input type="number" id="prix-produit" placeholder="Prix unitaire (FCFA)" min="0" step="0.01" required />
+        <button type="submit">Ajouter</button>
+      </form>
+    </section>
+
+    <section id="produits" class="section">
+      <h2>Produits en stock</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Quantité</th>
+            <th>Prix (FCFA)</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="produitBody"></tbody>
+      </table>
+      <button id="reset-stock" class="btn-reset">Réinitialiser le stock</button>
+    </section>
+
+    <section id="facturation" class="section">
+      <h2>Vente et Facturation</h2>
+      <form id="vente-form">
+        <select id="produit-a-vendre" required></select>
+        <input type="number" id="quantite-vendue" placeholder="Quantité vendue" min="1" required />
+        <button type="submit">Vendre</button>
+      </form>
+      <div id="details-facture" class="facture-section">
+        <p>Aucune vente en cours.</p>
+        <button id="btn-imprimer" style="display:none;">Imprimer la facture</button>
+      </div>
+    </section>
+
+    <section id="historique" class="section">
+      <h2>Historique des ventes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Produit</th>
+            <th>Quantité</th>
+            <th>Total (FCFA)</th>
+          </tr>
+        </thead>
+        <tbody id="historiqueBody"></tbody>
+      </table>
+    </section>
+
+    <section id="parametres" class="section">
+      <h2>Paramètres</h2>
+      <p>Fonctionnalités à venir...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SENStock - Développé par Ibrahima Gaye - Sénégal 🇸🇳</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
